@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>special card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <!-- Book-style card container -->
+    <div class="card-container">
+        <!-- Front Cover -->
+        <div class="cover">
+            <h1>It's my dad's birthday 🎉🎉🎉</h1>
+            <button onclick="openCard()">Open Card</button>
+        </div>
+
+        <!-- Inner Pages (flips open like a book) -->
+        <div class="inner-card">
+            <!-- Left Page: Image -->
+            <div class="page left-page">
+                <img src="bday.png" alt="Birthday Image">
+            </div>
+            <!-- Right Page: Message -->
+            <div class="page right-page">
+                <h3>Happy Birthday Papaaaaaaaaa 🎉</h3>
+                <div class="message-container">
+                      <p class="message">إلى أغلى أب في هذا العالم،
+
+                          اليوم ليس يومًا عاديًا، <br>
+                           اليوم هو اليوم الذي أشرقت فيه حياتك لتكون نورًا ودعماً وملجأً لي في هذه الدنيا ❤️<br>
+                           كل عام وأنت بخير يا أبي، يا من علمتني أن القوة ليست في الجسد بل في القلب، <br>
+                           وأن الحكمة ليست في الكلام بل في الفعل.
+                    
+                            أبي العزيز، كل سنة وأنت بصحة وعافية، مليء بالسعادة والرضا<br>
+                            أسأل الله أن يحفظك لنا، وأن يرزقك السعادة التي تملأ قلبك، <br>
+                           مثلما كنت دائمًا السبب في سعادتي. أنت قدوتي وفخري، وأحبك أكثر مما أستطيع أن أعبّر.
+                    
+                           عيد ميلاد سعيد يا أبي الغالي! 🎂
+                    
+                            ابنتك التي تحبك دائمًا،
+                             Roro
+                        </p>
+                </div>
+                <button onclick="goBack()">Close Card</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack(){
+            window.location.href = "index.html";
+            container.classList.add('flip-out');
+    
+            setTimeout(() => {
+            window.location.href = "index.html";
+            } , 800);
+        }
+        function openCard() {
+            document.querySelector(".card-container").classList.add("open");
+        }
+    </script>
+</body>
+</html>
